@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ListingExtra</title>
 <meta name="description" content="AI-curated print-on-demand automation: generate, curate, and publish wall art listings to Etsy and Pinterest.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
 <style>
   :root { color-scheme: dark; }
@@ -17,14 +18,19 @@
   .btn-primary:hover { background: #8FEDD2; }
   .card { border: 1px solid #262A35; border-radius: 10px; background: #171A23; }
   .wrap { max-width: 1280px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; }
   nav .links { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 500; }
+  .shot { width: 100%; display: block; border-radius: 8px; }
+  .shot-frame { border-radius: 10px; overflow: hidden; border: 1px solid #262A35; background: #0D0F15; }
+  .shot-bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; border-bottom: 1px solid #262A35; }
+  .shot-dot { width: 9px; height: 9px; border-radius: 50%; background: #333848; }
   @media (max-width: 860px) {
     nav .links { display: none; }
     header.hero { flex-direction: column; }
-    .features-grid, .steps-grid { grid-template-columns: 1fr 1fr !important; }
+    .features-grid, .steps-grid, .shots-grid { grid-template-columns: 1fr 1fr !important; }
   }
   @media (max-width: 560px) {
-    .features-grid, .steps-grid { grid-template-columns: 1fr !important; }
+    .features-grid, .steps-grid, .shots-grid { grid-template-columns: 1fr !important; }
     header.hero h1 { font-size: 34px !important; }
   }
 </style>
@@ -34,7 +40,13 @@
 
   <!-- NAV -->
   <nav style="display: flex; align-items: center; justify-content: space-between; padding: 24px 24px; border-bottom: 1px solid #262A35;">
-    <div class="display" style="font-size: 22px; font-weight: 700;">ListingExtra</div>
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="24" height="24" rx="7" stroke="#6FE3C4" stroke-width="2.2"/>
+        <path d="M8 14.5L12 18.5L20 9.5" stroke="#6FE3C4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="display" style="font-size: 20px; font-weight: 700;">ListingExtra</div>
+    </div>
     <div class="links">
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
@@ -80,6 +92,28 @@
       </div>
     </div>
   </header>
+
+  <!-- SCREENSHOTS -->
+  <section id="screenshots" style="padding: 8px 24px 64px;">
+    <h2 class="display" style="font-size: 28px; font-weight: 700; margin: 0 0 10px;">See it in action</h2>
+    <p style="font-size: 15px; color: #AEB4C2; margin: 0 0 28px; max-width: 640px;">Real screens from the local tool &mdash; not mockups.</p>
+    <div class="shots-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <div class="shot-frame">
+          <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span></div>
+          <img class="shot" src="shot-gallery.png" alt="Curation gallery showing generated wall art designs with approval status">
+        </div>
+        <div style="font-size: 13px; color: #AEB4C2; margin-top: 10px;">Curation gallery &mdash; every design waits for approval before it ships.</div>
+      </div>
+      <div>
+        <div class="shot-frame">
+          <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span></div>
+          <img class="shot" src="shot-detail.png" alt="Detailed gallery view with tag and style controls per design">
+        </div>
+        <div style="font-size: 13px; color: #AEB4C2; margin-top: 10px;">Per-design controls &mdash; tags, style, regeneration, all in one view.</div>
+      </div>
+    </div>
+  </section>
 
   <!-- FEATURES -->
   <section id="features" style="padding: 32px 24px 64px;">
