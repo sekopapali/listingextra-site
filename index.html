@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ListingExtra</title>
+<meta name="description" content="AI-curated print-on-demand automation: generate, curate, and publish wall art listings to Etsy and Pinterest.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #11131A; font-family: 'Public Sans', sans-serif; color: #EDEFF4; }
+  .display { font-family: 'Space Grotesk', sans-serif; }
+  a { color: #6FE3C4; text-decoration: none; }
+  a:hover { color: #8FEDD2; }
+  .btn-primary { background: #6FE3C4; color: #0B1512; }
+  .btn-primary:hover { background: #8FEDD2; }
+  .card { border: 1px solid #262A35; border-radius: 10px; background: #171A23; }
+  .wrap { max-width: 1280px; margin: 0 auto; }
+  nav .links { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 500; }
+  @media (max-width: 860px) {
+    nav .links { display: none; }
+    header.hero { flex-direction: column; }
+    .features-grid, .steps-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 560px) {
+    .features-grid, .steps-grid { grid-template-columns: 1fr !important; }
+    header.hero h1 { font-size: 34px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 24px 24px; border-bottom: 1px solid #262A35;">
+    <div class="display" style="font-size: 22px; font-weight: 700;">ListingExtra</div>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="mailto:hello@listingextra.com" class="btn-primary" style="padding: 10px 20px; border-radius: 6px; font-weight: 600;">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" style="padding: 64px 24px 56px; display: flex; gap: 48px; align-items: center; flex-wrap: wrap;">
+    <div style="flex: 1 1 480px; min-width: 0;">
+      <div style="display: inline-block; font-size: 13px; font-weight: 600; color: #6FE3C4; background: #16342D; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;">Built with Claude Code</div>
+      <h1 class="display" style="font-size: 44px; line-height: 1.2; font-weight: 700; margin: 0 0 20px;">
+        From concept to checkout: automate print-on-demand listings
+      </h1>
+      <p style="font-size: 17px; line-height: 1.6; color: #AEB4C2; margin: 0 0 32px;">
+        Generate wall art with AI, review it in your own curation gallery, get an SEO score before you publish,
+        and push approved designs straight to Etsy and Pinterest &mdash; no manual re-entry.
+      </p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="mailto:hello@listingextra.com" class="btn-primary" style="padding: 13px 26px; border-radius: 6px; font-weight: 600; font-size: 15px;">Get in touch</a>
+        <a href="#how" style="padding: 13px 26px; border-radius: 6px; font-weight: 600; font-size: 15px; border: 1px solid #333848; color: #EDEFF4;">See how it works</a>
+      </div>
+    </div>
+    <div class="card" style="flex: 1 1 420px; min-width: 0; padding: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="font-size: 13px; font-weight: 600; color: #AEB4C2;">Production queue</div>
+        <div style="font-size: 12px; color: #6FE3C4;">&#9679; Live</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
+          <div style="font-size: 13px;">Coastal Series &mdash; Wall Art</div>
+          <div style="font-size: 12px; color: #6FE3C4;">SEO 92</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
+          <div style="font-size: 13px;">Botanical Set &mdash; Wall Art</div>
+          <div style="font-size: 12px; color: #6FE3C4;">SEO 88</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
+          <div style="font-size: 13px;">Mid-Century Abstract</div>
+          <div style="font-size: 12px; color: #F2C14E;">In review</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" style="padding: 32px 24px 64px;">
+    <h2 class="display" style="font-size: 28px; font-weight: 700; margin: 0 0 32px;">What's in the box</h2>
+    <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px;">
+      <div class="card" style="padding: 22px;">
+        <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #6FE3C4;">Curation gallery</div>
+        <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Every generated design waits for your approval before it ever reaches a shelf.</div>
+      </div>
+      <div class="card" style="padding: 22px;">
+        <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #6FE3C4;">SEO scoring</div>
+        <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Titles and tags are scored against real marketplace search data before publishing.</div>
+      </div>
+      <div class="card" style="padding: 22px;">
+        <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #6FE3C4;">Automatic mockups</div>
+        <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Varied, non-repeating product photography generated from a rotating template set.</div>
+      </div>
+      <div class="card" style="padding: 22px;">
+        <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #6FE3C4;">One-click publishing</div>
+        <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Approved designs go to Etsy and Pinterest automatically, no manual re-entry.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" style="padding: 40px 24px 64px; background: #171A23; border-top: 1px solid #262A35; border-bottom: 1px solid #262A35;">
+    <h2 class="display" style="font-size: 28px; font-weight: 700; margin: 0 0 32px;">How it works</h2>
+    <div class="steps-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 24px;">
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">01</div><div style="font-weight: 600; margin-bottom: 6px;">Generate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Concept and artwork generation begins.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">02</div><div style="font-weight: 600; margin-bottom: 6px;">Curate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Review the gallery, approve or reject.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">03</div><div style="font-weight: 600; margin-bottom: 6px;">Mock up</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Product photography is generated automatically.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">04</div><div style="font-weight: 600; margin-bottom: 6px;">Publish</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Sent automatically to Etsy and Pinterest.</div></div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: 56px 24px; text-align: center;">
+    <div class="display" style="font-size: 20px; font-weight: 600; max-width: 680px; margin: 0 auto 14px; color: #EDEFF4;">
+      The whole pipeline &mdash; generation, curation, listing, QA &mdash; is built and run with Claude Code.
+    </div>
+    <div style="font-size: 13px; color: #AEB4C2;">Built by one person automating a real print-on-demand shop.</div>
+  </section>
+
+  <footer style="padding: 24px; border-top: 1px solid #262A35; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #6B7080;">
+    <div>&copy; 2026 ListingExtra</div>
+    <div style="display: flex; gap: 24px;">
+      <a href="mailto:hello@listingextra.com" style="color: #6B7080;">hello@listingextra.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
