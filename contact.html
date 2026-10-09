@@ -12,11 +12,18 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: #11131A; font-family: 'Public Sans', sans-serif; color: #EDEFF4; }
   .display { font-family: 'Space Grotesk', sans-serif; }
-  a { color: #4F8EFF; text-decoration: none; }
-  a:hover { color: #7AADFF; }
-  .btn-primary { background: #4F8EFF; color: #0B1512; }
-  .btn-primary:hover { background: #7AADFF; }
-  .card { border: 1px solid #262A35; border-radius: 10px; background: #171A23; }
+  a { color: #2A8AFF; text-decoration: none; }
+  a:hover { color: #5BAEFF; }
+  .btn-primary {
+    background: linear-gradient(135deg, #3B9BFF, #0A5FE0); color: #FFFFFF; border: 1px solid rgba(120,170,255,0.5);
+    box-shadow: 0 4px 20px rgba(42,138,255,0.3), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-primary:hover { background: linear-gradient(135deg, #5BAEFF, #1A6FF2); }
+  .card {
+    border: 1px solid #2A3040; border-radius: 10px;
+    background: linear-gradient(165deg, #1C202C 0%, #171A23 60%, #12151D 100%);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+  }
   .wrap { max-width: 1280px; margin: 0 auto; }
   .brand { display: flex; align-items: center; gap: 10px; }
   nav .links { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 500; }
@@ -37,10 +44,20 @@
   <nav style="display: flex; align-items: center; justify-content: space-between; padding: 24px 24px; border-bottom: 1px solid #262A35;">
     <a href="index.html" class="brand">
       <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="24" height="24" rx="7" stroke="#4F8EFF" stroke-width="2.2"/>
-        <path d="M8 14.5L12 18.5L20 9.5" stroke="#4F8EFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="2" y="2" width="24" height="24" rx="7" stroke="#2A8AFF" stroke-width="2.2"/>
+        <path d="M8 14.5L12 18.5L20 9.5" stroke="#2A8AFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="display" style="font-size: 20px; font-weight: 700; color: #EDEFF4;">ListingExtra</div>
+      <svg width="76" height="32" viewBox="0 0 76 32" style="margin-left: 2px;" aria-hidden="true">
+        <g transform="rotate(-18 38 16)">
+          <rect x="2"  y="12" width="15" height="15" fill="#3B82F6"/>
+          <rect x="19" y="12" width="15" height="15" fill="#F2F4F8"/>
+          <rect x="36" y="9"  width="11" height="11" fill="#3B82F6"/>
+          <rect x="49" y="9"  width="11" height="11" fill="#F2F4F8" opacity="0.9"/>
+          <rect x="60" y="7"  width="7"  height="7"  fill="#5B6B85" opacity="0.75"/>
+          <rect x="69" y="6"  width="4"  height="4"  fill="#3B82F6" opacity="0.55"/>
+        </g>
+      </svg>
     </a>
     <div class="links">
       <a href="index.html#features">Features</a>
@@ -98,9 +115,9 @@
         <div style="flex: 1 1 280px; min-width: 0; background: #0D0F15; padding: 36px; border-left: 1px solid #262A35; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
           <div>
             <div style="font-size: 12px; color: #6B7080; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;">Prefer email?</div>
-            <button type="button" onclick="copyEmail(this)" style="background: none; border: none; padding: 0; cursor: pointer; font-family: 'Public Sans', sans-serif; font-size: 16px; font-weight: 600; color: #4F8EFF; display: flex; align-items: center; gap: 8px;">
+            <button type="button" onclick="copyEmail(this)" style="background: none; border: none; padding: 0; cursor: pointer; font-family: 'Public Sans', sans-serif; font-size: 16px; font-weight: 600; color: #2A8AFF; display: flex; align-items: center; gap: 8px;">
               <span>hello@listingextra.com</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2" stroke="#4F8EFF" stroke-width="1.8"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" stroke="#4F8EFF" stroke-width="1.8"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2" stroke="#2A8AFF" stroke-width="1.8"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" stroke="#2A8AFF" stroke-width="1.8"/></svg>
             </button>
             <div style="font-size: 12px; color: #495066; margin-top: 4px;">Click to copy</div>
           </div>
