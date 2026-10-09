@@ -12,10 +12,10 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: #11131A; font-family: 'Public Sans', sans-serif; color: #EDEFF4; }
   .display { font-family: 'Space Grotesk', sans-serif; }
-  a { color: #6FE3C4; text-decoration: none; }
-  a:hover { color: #8FEDD2; }
-  .btn-primary { background: #6FE3C4; color: #0B1512; }
-  .btn-primary:hover { background: #8FEDD2; }
+  a { color: #4F8EFF; text-decoration: none; }
+  a:hover { color: #7AADFF; }
+  .btn-primary { background: #4F8EFF; color: #0B1512; }
+  .btn-primary:hover { background: #7AADFF; }
   .card { border: 1px solid #262A35; border-radius: 10px; background: #171A23; }
   .wrap { max-width: 1280px; margin: 0 auto; }
   .brand { display: flex; align-items: center; gap: 10px; }
@@ -28,15 +28,15 @@
   /* hero decoration */
   .hero-wrap { position: relative; overflow: hidden; }
   .glow { position: absolute; border-radius: 50%; filter: blur(70px); pointer-events: none; z-index: 0; }
-  .glow-a { width: 420px; height: 420px; background: radial-gradient(circle, rgba(111,227,196,0.22), transparent 70%); top: -140px; right: -80px; animation: float-a 14s ease-in-out infinite; }
-  .glow-b { width: 320px; height: 320px; background: radial-gradient(circle, rgba(111,227,196,0.12), transparent 70%); bottom: -120px; left: 10%; animation: float-b 18s ease-in-out infinite; }
+  .glow-a { width: 420px; height: 420px; background: radial-gradient(circle, rgba(79,142,255,0.22), transparent 70%); top: -140px; right: -80px; animation: float-a 14s ease-in-out infinite; }
+  .glow-b { width: 320px; height: 320px; background: radial-gradient(circle, rgba(79,142,255,0.12), transparent 70%); bottom: -120px; left: 10%; animation: float-b 18s ease-in-out infinite; }
   .dot-grid { position: absolute; inset: 0; z-index: 0; opacity: 0.5;
     background-image: radial-gradient(#262A35 1px, transparent 1px); background-size: 22px 22px;
     mask-image: radial-gradient(ellipse 900px 420px at 70% 0%, #000 40%, transparent 85%); }
   @keyframes float-a { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-24px, 28px); } }
   @keyframes float-b { 0%,100% { transform: translate(0,0); } 50% { transform: translate(20px, -18px); } }
-  .pulse-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #6FE3C4; margin-right: 6px; animation: pulse 1.8s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(111,227,196,0.5); } 50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(111,227,196,0); } }
+  .pulse-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #4F8EFF; margin-right: 6px; animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(79,142,255,0.5); } 50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(79,142,255,0); } }
   .typecard { position: relative; z-index: 1; }
   @media (prefers-reduced-motion: reduce) { .glow-a, .glow-b, .pulse-dot { animation: none; } }
   @media (max-width: 860px) {
@@ -61,8 +61,8 @@
   <nav style="display: flex; align-items: center; justify-content: space-between; padding: 24px 24px; border-bottom: 1px solid #262A35;">
     <div class="brand">
       <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="24" height="24" rx="7" stroke="#6FE3C4" stroke-width="2.2"/>
-        <path d="M8 14.5L12 18.5L20 9.5" stroke="#6FE3C4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="2" y="2" width="24" height="24" rx="7" stroke="#4F8EFF" stroke-width="2.2"/>
+        <path d="M8 14.5L12 18.5L20 9.5" stroke="#4F8EFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="display" style="font-size: 20px; font-weight: 700;">ListingExtra</div>
     </div>
@@ -78,7 +78,7 @@
   <!-- HERO -->
   <header class="hero" style="padding: 64px 24px 56px; display: flex; gap: 48px; align-items: center; flex-wrap: wrap;">
     <div style="flex: 1 1 480px; min-width: 0;">
-      <div style="display: inline-block; font-size: 13px; font-weight: 600; color: #6FE3C4; background: #16342D; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;">Built with Claude Code</div>
+      <div style="display: inline-block; font-size: 13px; font-weight: 600; color: #4F8EFF; background: #16243D; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;">Built with Claude Code</div>
       <h1 class="display" style="font-size: 44px; line-height: 1.2; font-weight: 700; margin: 0 0 20px;">
         From concept to checkout: automate print-on-demand listings
       </h1>
@@ -95,16 +95,16 @@
     <div class="card typecard" style="flex: 1 1 420px; min-width: 0; padding: 20px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
         <div style="font-size: 13px; font-weight: 600; color: #AEB4C2;">Production queue</div>
-        <div style="font-size: 12px; color: #6FE3C4; display: flex; align-items: center;"><span class="pulse-dot"></span>Live</div>
+        <div style="font-size: 12px; color: #4F8EFF; display: flex; align-items: center;"><span class="pulse-dot"></span>Live</div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
           <div style="font-size: 13px;">Coastal Series &mdash; Wall Art</div>
-          <div style="font-size: 12px; color: #6FE3C4;">SEO 92</div>
+          <div style="font-size: 12px; color: #4F8EFF;">SEO 92</div>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
           <div style="font-size: 13px;">Botanical Set &mdash; Wall Art</div>
-          <div style="font-size: 12px; color: #6FE3C4;">SEO 88</div>
+          <div style="font-size: 12px; color: #4F8EFF;">SEO 88</div>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
           <div style="font-size: 13px;">Mid-Century Abstract</div>
@@ -131,7 +131,7 @@
         </div>
       </div>
       <div style="flex: 1 1 280px; min-width: 0;">
-        <div class="display" style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6FE3C4; margin-bottom: 10px;">The fix</div>
+        <div class="display" style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4F8EFF; margin-bottom: 10px;">The fix</div>
         <div style="font-size: 18px; line-height: 1.6; color: #EDEFF4;">
           ListingExtra runs that loop for you. You stay in control of what ships &mdash; it handles everything
           between a finished design and a live listing.
@@ -168,15 +168,15 @@
       </div>
       <div style="flex: 1 1 360px; min-width: 0; background: #0D0F15; padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 18px; border-left: 1px solid #262A35;">
         <div style="display: flex; gap: 12px; align-items: flex-start;">
-          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16342D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#6FE3C4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16243D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#4F8EFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div style="font-size: 14px; color: #C8CDD6;">Connect your Etsy (and Pinterest) account in one step.</div>
         </div>
         <div style="display: flex; gap: 12px; align-items: flex-start;">
-          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16342D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#6FE3C4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16243D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#4F8EFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div style="font-size: 14px; color: #C8CDD6;">Your first batch of designs lands in the curation gallery.</div>
         </div>
         <div style="display: flex; gap: 12px; align-items: flex-start;">
-          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16342D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#6FE3C4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: #16243D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 12L10 18L20 6" stroke="#4F8EFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div style="font-size: 14px; color: #C8CDD6;">Approve what you like &mdash; it publishes itself.</div>
         </div>
       </div>
@@ -210,22 +210,22 @@
     <h2 class="display" style="font-size: 28px; font-weight: 700; margin: 0 0 32px;">What's in the box</h2>
     <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px;">
       <div class="card" style="padding: 22px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#6FE3C4" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#6FE3C4" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#6FE3C4" stroke-width="1.8"/><path d="M15.5 17L17 18.5L20.5 15" stroke="#6FE3C4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#4F8EFF" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="#4F8EFF" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="#4F8EFF" stroke-width="1.8"/><path d="M15.5 17L17 18.5L20.5 15" stroke="#4F8EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Curation gallery</div>
         <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Every generated design waits for your approval before it ever reaches a shelf.</div>
       </div>
       <div class="card" style="padding: 22px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><path d="M4 20V13M10 20V8M16 20V4M20 20H2" stroke="#6FE3C4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><path d="M4 20V13M10 20V8M16 20V4M20 20H2" stroke="#4F8EFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">SEO scoring</div>
         <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Titles and tags are scored against real marketplace search data before publishing.</div>
       </div>
       <div class="card" style="padding: 22px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><rect x="3" y="4" width="18" height="13" rx="1.8" stroke="#6FE3C4" stroke-width="1.8"/><path d="M8 21H16M12 17V21" stroke="#6FE3C4" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><rect x="3" y="4" width="18" height="13" rx="1.8" stroke="#4F8EFF" stroke-width="1.8"/><path d="M8 21H16M12 17V21" stroke="#4F8EFF" stroke-width="1.8" stroke-linecap="round"/></svg>
         <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Automatic mockups</div>
         <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Varied, non-repeating product photography generated from a rotating template set.</div>
       </div>
       <div class="card" style="padding: 22px;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><path d="M3 11L20 3L13 20L10.5 13.5L3 11Z" stroke="#6FE3C4" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="margin-bottom: 14px;"><path d="M3 11L20 3L13 20L10.5 13.5L3 11Z" stroke="#4F8EFF" stroke-width="1.8" stroke-linejoin="round"/></svg>
         <div class="display" style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">One-click publishing</div>
         <div style="font-size: 14px; line-height: 1.6; color: #AEB4C2;">Approved designs go to Etsy and Pinterest automatically, no manual re-entry.</div>
       </div>
@@ -252,9 +252,9 @@
         <a href="contact.html?topic=Silver%20plan" style="text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; font-size: 14px; border: 1px solid #333848; color: #EDEFF4;">Start Free</a>
       </div>
 
-      <div class="card" style="padding: 28px; display: flex; flex-direction: column; border-color: #6FE3C4; position: relative;">
-        <div style="position: absolute; top: -12px; left: 28px; background: #6FE3C4; color: #0B1512; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px;">Most popular</div>
-        <div class="display" style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6FE3C4; margin-bottom: 14px;">Gold</div>
+      <div class="card" style="padding: 28px; display: flex; flex-direction: column; border-color: #4F8EFF; position: relative;">
+        <div style="position: absolute; top: -12px; left: 28px; background: #4F8EFF; color: #0B1512; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px;">Most popular</div>
+        <div class="display" style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4F8EFF; margin-bottom: 14px;">Gold</div>
         <div style="margin-bottom: 18px;"><span class="display" style="font-size: 36px; font-weight: 700;">$35</span><span style="font-size: 14px; color: #6B7080;"> / month</span></div>
         <div style="font-size: 13px; color: #AEB4C2; margin-bottom: 24px;">For shops ready to scale output.</div>
         <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #C8CDD6; margin-bottom: 28px; flex: 1;">
@@ -289,10 +289,10 @@
   <section id="how" style="padding: 40px 24px 64px; background: #171A23; border-top: 1px solid #262A35; border-bottom: 1px solid #262A35;">
     <h2 class="display" style="font-size: 28px; font-weight: 700; margin: 0 0 32px;">How it works</h2>
     <div class="steps-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 24px;">
-      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">01</div><div style="font-weight: 600; margin-bottom: 6px;">Generate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Concept and artwork generation begins.</div></div>
-      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">02</div><div style="font-weight: 600; margin-bottom: 6px;">Curate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Review the gallery, approve or reject.</div></div>
-      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">03</div><div style="font-weight: 600; margin-bottom: 6px;">Mock up</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Product photography is generated automatically.</div></div>
-      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #6FE3C4; margin-bottom: 8px;">04</div><div style="font-weight: 600; margin-bottom: 6px;">Publish</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Sent automatically to Etsy and Pinterest.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #4F8EFF; margin-bottom: 8px;">01</div><div style="font-weight: 600; margin-bottom: 6px;">Generate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Concept and artwork generation begins.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #4F8EFF; margin-bottom: 8px;">02</div><div style="font-weight: 600; margin-bottom: 6px;">Curate</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Review the gallery, approve or reject.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #4F8EFF; margin-bottom: 8px;">03</div><div style="font-weight: 600; margin-bottom: 6px;">Mock up</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Product photography is generated automatically.</div></div>
+      <div><div class="display" style="font-size: 30px; font-weight: 700; color: #4F8EFF; margin-bottom: 8px;">04</div><div style="font-weight: 600; margin-bottom: 6px;">Publish</div><div style="font-size: 13px; color: #AEB4C2; line-height: 1.5;">Sent automatically to Etsy and Pinterest.</div></div>
     </div>
   </section>
 
@@ -305,9 +305,9 @@
 
   <!-- CLOSING CTA -->
   <section style="padding: 0 24px 72px; text-align: center;">
-    <div class="card" style="padding: 48px 32px; background: #16342D; border-color: #1E4A3B;">
+    <div class="card" style="padding: 48px 32px; background: #16243D; border-color: #24406B;">
       <div class="display" style="font-size: 24px; font-weight: 700; margin: 0 0 12px;">Want to see it running on a real shop?</div>
-      <div style="font-size: 15px; color: #C8E8DD; margin: 0 0 28px; max-width: 480px; margin-left: auto; margin-right: auto;">Reach out and I'll walk you through the live pipeline, end to end.</div>
+      <div style="font-size: 15px; color: #CBDBFF; margin: 0 0 28px; max-width: 480px; margin-left: auto; margin-right: auto;">Reach out and I'll walk you through the live pipeline, end to end.</div>
       <a href="contact.html" class="btn-primary" style="padding: 13px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; display: inline-block;">Get in touch</a>
     </div>
   </section>
