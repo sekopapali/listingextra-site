@@ -20,10 +20,25 @@
   .wrap { max-width: 1280px; margin: 0 auto; }
   .brand { display: flex; align-items: center; gap: 10px; }
   nav .links { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 500; }
-  .shot { width: 100%; display: block; border-radius: 8px; }
+  .shot { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; display: block; border-radius: 8px; }
   .shot-frame { border-radius: 10px; overflow: hidden; border: 1px solid #262A35; background: #0D0F15; }
   .shot-bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; border-bottom: 1px solid #262A35; }
   .shot-dot { width: 9px; height: 9px; border-radius: 50%; background: #333848; }
+
+  /* hero decoration */
+  .hero-wrap { position: relative; overflow: hidden; }
+  .glow { position: absolute; border-radius: 50%; filter: blur(70px); pointer-events: none; z-index: 0; }
+  .glow-a { width: 420px; height: 420px; background: radial-gradient(circle, rgba(111,227,196,0.22), transparent 70%); top: -140px; right: -80px; animation: float-a 14s ease-in-out infinite; }
+  .glow-b { width: 320px; height: 320px; background: radial-gradient(circle, rgba(111,227,196,0.12), transparent 70%); bottom: -120px; left: 10%; animation: float-b 18s ease-in-out infinite; }
+  .dot-grid { position: absolute; inset: 0; z-index: 0; opacity: 0.5;
+    background-image: radial-gradient(#262A35 1px, transparent 1px); background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse 900px 420px at 70% 0%, #000 40%, transparent 85%); }
+  @keyframes float-a { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-24px, 28px); } }
+  @keyframes float-b { 0%,100% { transform: translate(0,0); } 50% { transform: translate(20px, -18px); } }
+  .pulse-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #6FE3C4; margin-right: 6px; animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(111,227,196,0.5); } 50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(111,227,196,0); } }
+  .typecard { position: relative; z-index: 1; }
+  @media (prefers-reduced-motion: reduce) { .glow-a, .glow-b, .pulse-dot { animation: none; } }
   @media (max-width: 860px) {
     nav .links { display: none; }
     header.hero { flex-direction: column; }
@@ -36,7 +51,11 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="hero-wrap">
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
+<div class="dot-grid"></div>
+<div class="wrap" style="position: relative; z-index: 1;">
 
   <!-- NAV -->
   <nav style="display: flex; align-items: center; justify-content: space-between; padding: 24px 24px; border-bottom: 1px solid #262A35;">
@@ -73,10 +92,10 @@
       </div>
       <div style="font-size: 12px; color: #6B7080; margin-top: 14px;">No credit card required &middot; cancel anytime</div>
     </div>
-    <div class="card" style="flex: 1 1 420px; min-width: 0; padding: 20px;">
+    <div class="card typecard" style="flex: 1 1 420px; min-width: 0; padding: 20px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
         <div style="font-size: 13px; font-weight: 600; color: #AEB4C2;">Production queue</div>
-        <div style="font-size: 12px; color: #6FE3C4;">&#9679; Live</div>
+        <div style="font-size: 12px; color: #6FE3C4; display: flex; align-items: center;"><span class="pulse-dot"></span>Live</div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <div style="display: flex; justify-content: space-between; align-items: center; background: #1D2029; border-radius: 8px; padding: 12px 14px;">
@@ -94,6 +113,11 @@
       </div>
     </div>
   </header>
+
+</div>
+</div>
+
+<div class="wrap">
 
   <!-- PROBLEM -->
   <section style="padding: 8px 24px 56px;">
